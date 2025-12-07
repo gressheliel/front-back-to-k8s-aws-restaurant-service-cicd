@@ -9,7 +9,7 @@ eureka:
 # PARA USO AWS RDS
 spring:
   datasource:
-    url: mysql-db-instance.cs9gqgw2kwgt.us-east-1.rds.amazonaws.com
+    url: jdbc:mysql://mysql-db-instance.cs9gqgw2kwgt.us-east-1.rds.amazonaws.com:3306/restaurantdb
     password: elieta103
     username: admin
 # PARA USO CON KUBERNETES
