@@ -6,11 +6,18 @@ eureka:
     service-url:
       #defaultZone: ${EUREKA_SERVER_ADDRESS}
       defaultZone: http://eureka-0.eureka-service.default.svc.cluster.local:8761/eureka
+# PARA USO AWS RDS
 spring:
   datasource:
-    url: ${SPRING_DATASOURCE_URL}
-    password: ${SPRING_DATASOURCE_PASSWORD}
-    username: ${SPRING_DATASOURCE_USERNAME}
+    url: mysql-db-instance.cs9gqgw2kwgt.us-east-1.rds.amazonaws.com
+    password: elieta103
+    username: admin
+# PARA USO CON KUBERNETES
+#spring:
+#  datasource:
+#    url: ${SPRING_DATASOURCE_URL}
+#    password: ${SPRING_DATASOURCE_PASSWORD}
+#    username: ${SPRING_DATASOURCE_USERNAME}
 
 # http:// This speciﬁes the protocol used for communication, in this case, HTTP.
 # eureka-0: This is the hostname of the Eureka server instance within the Kubernetes cluster.
