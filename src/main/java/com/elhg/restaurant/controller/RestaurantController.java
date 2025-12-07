@@ -17,6 +17,7 @@ public class RestaurantController {
 
     private final RestaurantService restaurantService;
 
+    //Recuperar todos los restaurantes
     @GetMapping("/fetchAllRestaurants")
     public ResponseEntity<List<RestaurantDTO>> fetchAllRestaurants(){
         List<RestaurantDTO> allRestaurants = restaurantService.findAllRestaurants();
